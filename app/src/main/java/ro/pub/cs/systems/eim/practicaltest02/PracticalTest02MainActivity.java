@@ -33,8 +33,7 @@ public class PracticalTest02MainActivity extends AppCompatActivity {
         serverMessageTextView = findViewById(R.id.server_message_text_view);
 
         startServerButton.setOnClickListener( v-> {
-            if(serverThread == null)
-                serverThread = new ServerThread(portEditText, serverMessageTextView);
+            serverThread = new ServerThread(portEditText, serverMessageTextView);
             serverThread.startServer();
         });
 
